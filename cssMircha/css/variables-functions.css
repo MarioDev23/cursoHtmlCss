@@ -1,0 +1,54 @@
+:root{
+    --primary-color2: pink;
+}
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing:inherit;
+}
+.emoji{
+    text-decoration: none;
+    font-size: 2rem;
+}
+.emoji:hover{
+    display: inline-block;
+    font-size: 2.5rem;
+    transition: all .2s;
+}
+.props-title{
+    --primary-color:purple;
+    color: var(--primary-color, orange);
+}
+.custom-props-1{
+    --primary-color: gray;
+    --font-size: 32px;
+}
+.custom-props-1{
+    background-color: var(--primary-color2);
+    font-size: var(--font-size);
+}
+
+/*Funciones CSS*/
+.ch-10{
+    --padding-size: 2ch;
+    --num-ch: 10ch;
+    background-color: skyblue;
+    font-size: 2rem;
+    padding: var(--padding-size);
+    /*Debemos de dejar los espacios entre las variables*/
+    width: calc(var(--num-ch) + var(--padding-size) * 2);
+}
+
+.min-max{
+    background-color:skyblue;
+    margin-top: 1rem;
+    width: min(300px, 20vw);
+    height: max(200px, 25vh);
+}
+
+h1{
+    font-size: clamp(2rem, 1rem + 3vw, 3rem);
+}

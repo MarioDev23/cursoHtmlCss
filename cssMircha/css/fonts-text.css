@@ -1,0 +1,92 @@
+.emoji{
+    font-size: 2rem;
+    text-decoration: none;
+}
+.emoji:hover{
+    font-size:2.5rem;
+    transition: .2s;
+}
+/*
+    font-family
+    font-size
+    font-weight
+    font-style
+    font-variant
+    line-height
+*/
+/*
+    Formato woff o woff2 - Web Open Font Format
+
+    font-display:
+      auto - Permite que el navegador utilice el método predeterminado qe suele ser block.
+      block - Oculta brevemente el texto hasta que la fuente haya sudo descargada por completo.
+      swap - Indica al navegador que utilice la fuente alternativa para mostrar el texto hasta que la fuente personalizad ase haya cargado por completo.
+      fallback - Ocultará el texto, luego cargará con la fuente alternativa y finalmente aplicará la fuente personalizada
+*/
+.font{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    font-variant: small-caps;
+    line-height: 1.5;
+}
+@font-face {
+    font-family: 'Chalet';
+    src: url('../assets/Chalet.woff') format('woff'),
+         url('../assets/Chalet.woff2') format('woff2');
+         font-display: swap;
+}
+@font-face{
+    font-family: 'Pecita';
+    src: url('../assets/Pecita.woff') format('woff');
+    font-display: swap;
+}
+.chalet{
+    font-family: 'Chalet', sans-serif;
+}
+.pecita{
+    font-family: 'Pecita', sans-serif;
+}
+
+/*
+    text-align
+    text-decoration
+    text-indent
+    text-overflow - Agrega puntos suspencivos al texto 
+        (Para que text-overflow funcione debemos de tener activada las siguientes propiedades overflow: hidden; & white-space: nowrap;)
+    text-transform
+    letter-spacing
+
+    white-space
+    word-break
+    word-spacing
+    writing-mode
+*/
+.text{
+    font-size: 2rem;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 3rem;
+    text-transform: lowercase;
+    letter-spacing: .5rem;
+    word-break: break-all;
+    writing-mode: horizontal-tb;
+    writing-mode:sideways-lr
+}
+.text-overflow{
+    background-color:blanchedalmond;
+    border: thin solid #000;
+    padding: 1rem;
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.white-space{
+    white-space: pre-wrap;
+}
+.word-spacing{
+    font-size: 2rem;
+    word-spacing: 1rem;
+}

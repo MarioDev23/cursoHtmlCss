@@ -1,0 +1,40 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+.emoji{
+    font-size: 2rem;
+    text-decoration: none;
+}
+.emoji:hover{
+    font-size: 2.5rem;
+    transition: .2s;
+}
+/*Poner esto siempre en nuestras paginas con imagenes para hacerlas responsivas*/
+img{
+    max-width: 100%;
+    height: auto;
+}
+.card{
+    border: medium solid #000;
+    width: 400px;
+    height: 400px;
+}
+/*Para hacer este tipo de tarjetas podemos aplicar estas propiedades para que se ajuste la imagen al contenedor*/
+.card img{
+    height: 300px;
+    background-color: skyblue;
+    object-fit: fill;/*Default*/
+    object-fit: cover;
+    object-fit: contain;
+    object-fit: none;
+    /* object-fit: scale-down;Toma el valor que sea menor de lso valores contain o y none */
+    object-position: left top;
+    object-position: right bottom;
+    object-position: -50px center;
+    object-position: 50% 50%;
+}

@@ -1,0 +1,66 @@
+/*
+Para que no tape el contenido del body la cabecera fixed es recomendable agregarle un padding del mismo tamaño de la altura del header 
+*/
+
+/*Cabecera sticky con hero img*/
+body{
+    margin: 0;
+    /* padding-top: 50px; */
+}
+.header{
+    width: 100vw;
+    height: 50px;
+    background-color: mistyrose;
+}
+.fixed-top{
+    position: fixed;
+    top: 0;
+}
+
+.sticky-top{
+    position: sticky;
+    top: 0;
+}
+.hero-img{
+    background-color: palegoldenrod;
+    width: 100vw;
+    height: 100vh;
+}
+/*Fin de la cabecera*/
+
+/*Inicio de diapositivas Slides(stickys)*/
+.slide{
+    background-color: paleturquoise;
+    width: 100vw;
+    height: 100vh;
+}
+.slide:nth-child(odd){
+    background-color: palevioletred;
+}
+.slide-title{
+    background-color: palegreen;
+    padding: 16px;
+    text-align: center;
+    position: sticky;
+    top: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/*Fin de disapositivas stickys*/
+
+/*Inicio de ventana modal*/
+.modal-window{
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.5;
+    display: none;
+}
+
+.modal-window:target{
+    display: block;
+}

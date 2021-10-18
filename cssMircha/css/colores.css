@@ -1,0 +1,92 @@
+/*
+    Para acceder con más facilidad a los colores por nombres, Hexadecimal y rgb accede a esta pagina
+    htmlcolorcodes.com
+*/
+
+.emoji{
+    text-decoration: none;
+    font-size: 2rem;
+}
+.color-by-name{
+    background-color: coral;
+    color:purple;
+    border: thick solid greenyellow;
+}
+
+.color-hex{
+    background-color: #f60;
+    /*opacidad en 50%*/
+    background-color: #00000050;
+    /*opacidad en 50% pero simplificado*/
+    background-color: #0005;
+    color: #12ac78;
+    border: thick solid #f00;
+}
+/*
+Sistema RGB
+    Acepta 8 bits por canal de color
+    Bit (0/1) 2 elevado a la potencia 8 = 2*2*2*2*2*2*2*2 = 256
+    Por cada canal de color tenemos valores que val del 0 a 255
+*/
+.color-rgb{
+    background-color: rgb(255,255,255);
+    background-color: rgb(255, 0, 0);
+    background-color: rgb(0,255,0);
+    background-color: rgb(0,0,255);
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,.75);
+    color: rgb(255,102,0);
+    border: thick solid greenyellow;
+}
+
+/*
+HueSaturationLightnees (Tono-Saturacion-Luminosidad)
+
+EL primer valor es Hue (Circulo Cromático)
+  0 -> red
+  60° -> yellow
+  120° -> green
+  180° -> cyan
+  240° -> blue
+  300° -> magenta
+
+  El segundo valor es Saturation
+  
+  0% -> Escala de grises
+  100% -> color puro
+
+  El tercer valor es Lightnees
+  
+  0% -> negro
+  50% -> Color puro
+  100% -> Blanco
+
+*/
+.color-hsl{
+    background-color: hsl(0,100%,50%);
+    background-color: hsl(120, 100%, 50%);
+    background-color: hsl(240, 100%, 50%);
+    background-color: hsla(30, 100%, 50%, .5);
+    color: hsl(0,0%,100%);
+    border: thick solid hsl(210, 75%, 65%);
+}
+
+/*
+ trasparent: colorTrasparent es igual agregar rgba(0,0,0,0)
+ Valor currentColor: Hereda el valor por defecto o asingnado de la propiedad color, del ancestro que tenga definida esta ropiedad, busca del ancestro más cescano al más lejano.
+*/
+
+.color-transparent-current{
+    background-color: darkmagenta;
+    background-color: currentColor;
+    background-color: transparent;
+    background-color: trasparent;
+    border: thick solid currentColor;
+}
+
+.opacity{
+    background-color: orchid;
+    color: #000;
+    border: thick solid black;
+    opacity: .5;
+}

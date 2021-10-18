@@ -1,0 +1,281 @@
+html{
+    scroll-behavior: smooth;
+}
+.emoji{
+    text-decoration: none;
+    font-size: 2rem;
+}
+.emoji:hover{
+    display: inline-block;
+    font-size: 2.5rem;
+    transition: all .2s;
+}
+
+h1{
+    color: yellowgreen;
+    background-color: black;
+    border-style: solid;
+    text-align: center;
+}
+
+code span{
+    color: rgb(172, 172, 8);
+}
+/*
+Paginas para ayuda en html y css
+
+htmlReferens.io
+cssReferens.io
+codeGuide
+*/
+
+/*Selectores Basicos
+1) Etiquetas
+2) Identificadores
+3) Clases
+*/
+/* p{
+    color:midnightblue;
+} */
+/*Dar estilos con Id se considera antiPatrón*/
+#parrafo-dos{
+    background-color: skyblue;
+}
+
+/*Das estilos con clases nos permite reutilizar nuestro codigo CSS*/
+.bg-skyblue{
+    background-color:skyblue;
+}
+.bg-steelblue{
+    background-color: steelblue;
+}
+.text-20{
+    font-size: 20px;
+}
+.text-32{
+    font-size: 32px;
+}
+.text-white{
+    color:white;
+}
+
+/*Selectores Avanzados*/
+
+/*Para seleccionar los hijos directos con el simbolo > (Mayor que)*/
+.hijos-directos > li{
+    background-color:thistle;
+}
+
+/*Para seleccionar los hijos desendientes sin inportar el nivel en que se encuentre con el espacio en blancp*/
+.hijos-desendientes b{
+    background-color:thistle;
+}
+
+/*Selector hermanos General*/
+
+/*Aplica a todos los hermanos que este por debajo del elemento de referencia*/
+.hermanos-general ~ li{
+    background-color:thistle;
+}
+
+/*Selector hermanos abyacente*/
+
+/*Aplica a un solo hermano que este por debajo del elemento de referencia*/
+.hermanos-adyacente + li{
+    background-color:thistle;
+}
+
+/*Selectores de atributos*/
+
+.selectores-atributos a[href]{
+    color: orangered;
+}
+
+.selectores-atributos a[target="_blank"]{
+    font-weight: bold;
+}
+
+/*El comodin del asterisco  (*) aplica si contiene la palabra en cuestrio*/
+
+.selectores-atributos a[href*="jonmircha"]{
+    font-size: 24px;
+}
+
+/*El simbolo de sircunflejo (^) es para que solo tome encuenta los elementos que empiezan con dicho patron*/
+.selectores-atributos a[href^="http:"]{
+    text-decoration: none;
+}
+
+/*El simbolo de dollar ($) es para que solo tome encuenta los elementos que terminan con dicho patron*/
+.selectores-atributos a[href$=".com"]{
+    background-color: black;
+}
+
+/*El simbolo de tilde (~) aplica el estilo si contiene el texto en cuestion en una lista separada por espacios*/
+.selectores-atributos a[class~="cursos"]{
+    background-color: steelblue;
+}
+
+/*El simbolo (|) aplica el estilo si contiene el texto en cuestion en una lista separada por espacios y que despues del texto en cuestrion venga un guion medio (-) */
+.selectores-atributos a[class|="menu"]{
+    font-style:italic;
+}
+
+/*Selector universal*/
+*{
+    font-family: sans-serif;
+}
+
+.selector-universal *{
+    font-size: 24px;
+}
+
+/*Pseudo Clases*/
+
+.form-pseudoClases *:required{
+    border-color: yellow;
+}
+.form-pseudoClases *:valid{
+    border-color: green;
+}
+.form-pseudoClases *:invalid{
+    border-color: red;
+}
+.form-pseudoClases *:focus{
+    background-color: skyblue;
+}
+.form-pseudoClases *:disabled{
+    background-color: pink;
+}
+
+/*Pseudo Clases para enlaces*/
+
+.menu-pseudoClases a:visited{
+    color: olive;
+}
+.menu-pseudoClases a:hover{
+    color: orangered;
+}
+#temario-css:target{
+    background-color: lightseagreen;
+}
+
+/*Pseudo Clases por posicionamiento*/
+
+.list-pseudoClases li:first-child{
+    color: green;
+}
+.list-pseudoClases li:last-child{
+    color: violet;
+}
+.list-pseudoClases li:nth-child(3){
+    color:navy;
+}
+.list-pseudoClases li:nth-child(4n){
+    font-size: 20px;
+}
+.list-pseudoClases li:nth-child(3n + 1){
+    font-weight: bold;
+}
+.list-pseudoClases li:nth-child(even){
+    background-color: yellow;
+}
+.list-pseudoClases li:nth-child(odd){
+    background-color: orangered;
+}
+
+/*Pseudo Clases segun el tipo de elemento*/
+.article-pseudoClases p:first-of-type{
+    background-color: pink;
+}
+.article-pseudoClases p:last-of-type{
+    background-color: violet;
+}
+.article-pseudoClases p:nth-of-type(3){
+    background-color:fuchsia;
+}
+
+/*Aplicando estilos excepto a dichi elemento*/
+.article-pseudoClases *:not(p, .boton, .lista, #uno){
+    background-color: beige;
+}
+
+/*Pseudo Elementos*/
+
+.saga-geminis::before{
+    content: '¿';
+}
+.saga-geminis::after{
+    content: '?'
+}
+.saga-precio::before{
+    content: '$';
+    font-weight: bold;
+}
+.saga-precio::after{
+    content: 'USD';
+    font-weight: bold;
+}
+.p-pseudoElementos::first-letter{
+    font-size: 32px;
+    font-weight: bold;
+}
+.p-pseudoElementos::first-line{
+    color: coral;
+}
+.p-pseudoElementos::selection{
+    color: greenyellow;
+    background-color: #000;
+}
+.input-pseudoElementos::placeholder{
+    color: blue;
+}
+
+/*Agrupar Selectores*/
+
+.form-agruparSelectores input[type="text"],
+.form-agruparSelectores input[type="email"],
+.form-agruparSelectores textarea
+{
+    border-color: yellow;
+    background-color: black;
+    border-style: dashed;
+    border-width: 2px;
+    display: block;
+    color: grey;
+    font-size: 20px;
+    width: 300px;
+}
+
+/*Algoritmo CSS*/
+
+/*El Algoritmo de CSS: Es la forma en que el navegador aplica los estilos al documento HTML. ES vital entender este concepto para que entiendas como se aplican y en algunas ocaciones se sobreescriben las reglas CSS
+
+1) La Cáscada.
+2) La Especificidad
+3) La Hérencia
+
+La cascada es el mecanismo en que el navegador aplica los estilos. Y toma en cuenta lo siguiente en este orden.
+
+1) El origen del codigo:
+    - El user agent (Los estilos por defecto del navegador)
+    - Personalizaciones del usuario
+    - Los estilos del autor
+2) La especificidad del Selector
+3) Orden de apareción
+
+La especificidad es el peso que tiene un selector cuando hay conflicto de estilos. Se calucla de la siguiente forma:
+
+Etiqueas y Pseudo Elementoos ------- 0,0,0,1
+Clases, atributos y pseudo Clases--- 0,0,1,0
+Identificadores -------------------- 0,1,0,0
+Estilos en linea ------------------- 1,0,0,0
+!Important ---------- Rompe la especificidad
+
+La herencia, es la capacidad de un sleector de obtener (Heredar) los valores de sus ancestros ,ás cercanos, para aplicarla se usa el valor inherit, si queremos evitarla podemos asignar otro valor o incializarla propiedad en cuestion de valor initial
+
+*/
+
+
+
+
